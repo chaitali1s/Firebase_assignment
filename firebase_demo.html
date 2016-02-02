@@ -1,0 +1,127 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="firebase_demo.css">
+<link rel="stylesheet" type="text/css" href="base_form.css">
+<script type="text/javascript" src="base_form.js"></script>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+	<script>
+		var myFirebaseRef = new Firebase("https://assignmentfirebase.firebaseio.com/");
+		
+		myFirebaseRef.child("textdemo").on("value", function(snapshot) {
+		  var newsText=snapshot.val();
+		  document.getElementById('news1').innerHTML=newsText +'<a href="#" onclick="myFunction('+newsText+')">Read More</a>';
+		});
+		
+		myFirebaseRef.child("textdemo2").on("value", function(snapshot) {
+		  var newsText2=snapshot.val();
+		  document.getElementById('news2').innerHTML=newsText2+'<a href="#">Read More</a>';
+		});
+		
+		myFirebaseRef.child("textdemo3").on("value", function(snapshot) {
+		  var newsText3=snapshot.val();
+		  document.getElementById('news3').innerHTML=newsText3+'<a href="#">Read More</a>';
+		});
+		
+		myFirebaseRef.child("textdemo4").on("value", function(snapshot) {
+		  var newsText4=snapshot.val();
+		  document.getElementById('news4').innerHTML=newsText4+'<a href="#">Read More</a>';
+		});
+		
+		
+	</script>
+</head>
+<body>
+
+<div id="container">
+	<div id="header">
+		<h2 class="header-font">SEARS HOLDINGS</h2>
+		<h2 class="header-font">INDIA</h2>
+	</div>
+
+	<div id="left" class="left-inner">
+		<div>
+			<div class="left-inner">
+				<img src="sears1.jpg"/>
+			</div>
+			<div class="content-text">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		<br/>
+		<div>
+			<div class="left-inner">
+				<img src="sears2.jpg"/>
+			</div>
+			<div class="content-text">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		
+	</div>
+
+	<div id="right">
+		<h2 class="header-font">Latest News!!</h2>
+		<div id="news1" class="content-text right-content content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<a href="#">Read More</a></p>
+		</div>
+		<div id="news2" class="content-text right-content content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<a href="#">Read More</a></p>
+		</div>
+		<div id="news3" class="content-text right-content content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<a href="#">Read More</a></p>
+		</div>
+		<div id="news4" class="content-text right-content content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<a href="#" onclick="">Read More</a></p>
+		</div><!--content-->
+		
+	</div>
+
+</div>
+
+<div id="footer">
+	<div class="address content-text left-inner">
+		<span><i class="fa fa-home"><strong>Address : </strong><br/>  7th Floor, Wing C,<br/> EON Free Zone, Kharadi, Pune, Maharashtra 411014</i>
+		<br/>
+		<i class="fa fa-phone"><strong>Phone : </strong>020 6730 8512</i></span>
+	</div>
+	
+	<div class="contact">
+		<form name="contactForm" onsubmit="return validateForm()">
+			<h5>Contact Us</h5>
+			<input type="text" name="uname" class="formfields" placeholder="Your Name" /><br/>
+			<input type="text" name="eid" class="formfields" placeholder="Email Address" /><br/>
+			<textarea name="usermsg" class="formfields" placeholder="Type your Message"></textarea><br/>
+			<input type="submit" value="Submit" />
+		</form>
+		<p id="txtname"></p>
+		<p id="txtemail"></p>
+		<p id="txtmsg"></p>
+	</div>
+</div>
+
+</body>
+</html>
