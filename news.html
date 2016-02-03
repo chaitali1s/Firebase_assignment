@@ -1,0 +1,55 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="firebase_demo.css">
+<link rel="stylesheet" type="text/css" href="base_form.css">
+<script type="text/javascript" src="base_form.js"></script>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+<script type="text/javascript" src="nextpage.js">	</script>
+	
+</head>
+<body>
+
+<div id="container">
+	<div id="header">
+		<h2 class="header-font">SEARS HOLDINGS</h2>
+		<h2 class="header-font">INDIA</h2>
+	</div>
+
+
+	<div id="right">
+		
+		<h2 class="header-font">Latest News!!</h2>
+		<div id="news1" class="content-text right-content content">
+			<p></p>
+		</div>
+		<!--content-->
+		
+	</div>
+
+</div>
+
+<div id="footer">
+	<div class="address content-text left-inner">
+		<p><i class="fa fa-home"><strong>Address : </strong> <br/> 7th Floor, Wing C, EON Free Zone,<br/> Kharadi, Pune, Maharashtra 411014</i></p>
+		<p ><i class="fa fa-phone"><strong>Phone : </strong>020 6730 8512</i></p>
+	</div>
+	
+	<div class="contact left-inner">
+		<form name="contactForm" onsubmit="return validateForm()">
+			<h5>Contact Us</h5>
+			<input type="text" name="uname" class="formfields" placeholder="Your Name" /><br/>
+			<input type="text" name="eid" class="formfields" placeholder="Email Address" /><br/>
+			<textarea name="usermsg" class="formfields" placeholder="Type your Message"></textarea><br/>
+			<input type="submit" value="Submit" />
+		</form>
+		<p id="txtname"></p>
+		<p id="txtemail"></p>
+		<p id="txtmsg"></p>
+	</div>
+</div>
+
+</body>
+</html>

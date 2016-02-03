@@ -49,9 +49,13 @@ body{
 }
 .content-text{
 	text-align:justify;
-	text-overflow: ellipsis;overflow:hidden;
 }
-
+.news-content{
+	text-align:justify;
+	text-overflow: ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+}
 .right-content{
 	border:1px;
 	border-style: solid;

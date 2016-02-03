@@ -6,31 +6,7 @@
 <script type="text/javascript" src="base_form.js"></script>
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
-	<script>
-		var myFirebaseRef = new Firebase("https://assignmentfirebase.firebaseio.com/");
-		
-		myFirebaseRef.child("textdemo").on("value", function(snapshot) {
-		  var newsText=snapshot.val();
-		  document.getElementById('news1').innerHTML=newsText +'<a href="#" onclick="myFunction('+newsText+')">Read More</a>';
-		});
-		
-		myFirebaseRef.child("textdemo2").on("value", function(snapshot) {
-		  var newsText2=snapshot.val();
-		  document.getElementById('news2').innerHTML=newsText2+'<a href="#">Read More</a>';
-		});
-		
-		myFirebaseRef.child("textdemo3").on("value", function(snapshot) {
-		  var newsText3=snapshot.val();
-		  document.getElementById('news3').innerHTML=newsText3+'<a href="#">Read More</a>';
-		});
-		
-		myFirebaseRef.child("textdemo4").on("value", function(snapshot) {
-		  var newsText4=snapshot.val();
-		  document.getElementById('news4').innerHTML=newsText4+'<a href="#">Read More</a>';
-		});
-		
-		
-	</script>
+<script type="text/javascript" src="mainpage.js">	</script>
 </head>
 <body>
 
@@ -69,33 +45,17 @@
 
 	<div id="right">
 		<h2 class="header-font">Latest News!!</h2>
-		<div id="news1" class="content-text right-content content">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				<a href="#">Read More</a></p>
+		<div id="news1" class="news-content right-content content">
+			
 		</div>
-		<div id="news2" class="content-text right-content content">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				<a href="#">Read More</a></p>
+		<div id="news2" class="news-content right-content content">
+			
 		</div>
-		<div id="news3" class="content-text right-content content">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				<a href="#">Read More</a></p>
+		<div id="news3" class="news-content right-content content">
+			
 		</div>
-		<div id="news4" class="content-text right-content content">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				<a href="#" onclick="">Read More</a></p>
+		<div id="news4" class="news-content right-content content">
+			
 		</div><!--content-->
 		
 	</div>

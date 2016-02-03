@@ -44,9 +44,3 @@ function validateForm() {
 		}
 	}
 }
-
-function myFunction(news) {
-    var myWindow = window.open("", "myWindow", "width=200, height=100");
-    myWindow.document.write(news);
-    myWindow.opener.document.write("<p>This is the source window!</p>");
-}
